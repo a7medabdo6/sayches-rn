@@ -1,5 +1,5 @@
 // Instances //
-export const APIInstance = "https://sayches.com/api/react-native-post-api/";
+export const APIInstance = "";
 
 // Routers //
 export const PostSerializer = "/post/";
