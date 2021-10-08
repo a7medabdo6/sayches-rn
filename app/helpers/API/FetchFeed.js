@@ -5,10 +5,9 @@ import {
 } from "../../helpers/API/API";
 import axios from "axios";
 
-export const FetchFeed = async (setPostData) => {
-  const response = await axios.get(
-    APIInstance + PostSerializer,
-    AuthorizationHeader
-  );
-  setPostData(response.data);
+export const FetchFeed = async () => {
+  const response = await axios.get(APIInstance, AuthorizationHeader);
+  console.log(response.data, "response");
+  return response.data;
+  //setPostData();
 };

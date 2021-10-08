@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, FlatList, Text } from "react-native";
+
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import FeedScreen from "./app/screens/feed/Feed";
@@ -19,6 +20,20 @@ const fetchFont = () => {
 
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
+  const [postData, setPostData] = useState([
+    {
+      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+      title: "First Item",
+    },
+    {
+      id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+      title: "Second Item",
+    },
+    {
+      id: "58694a0f-3da1-471f-bd96-145571e29d72",
+      title: "Third Item",
+    },
+  ]);
 
   if (!fontLoaded) {
     return (
